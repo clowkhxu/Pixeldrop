@@ -33,6 +33,9 @@ $('#find-domain').click(function(e) {
                 xyz+='<tr><th>Trạng Thái Miền:</th><td>'+data.whois.Domain_Status+'</td></tr>';
                 xyz+='<tr><th>Name Servers：</th><td>'+data.whois.Name_Server.join("<br/>")+'</td></tr>';
                 xyz+='<tr><th>Cập Nhật Lần Cuối </th><td>'+data.last_update+'</td></tr>';
+                xyz+='</table></div>';
+                $('#result').html(xyz);
+            } else if (data.status === 'error') {
             }
         },
         error: function(xhr, status, error) {
